@@ -1,7 +1,7 @@
 version: 2
 jobs:
   build:
-    working_directory: /app
+    working_directory: ~/package
     docker:
       - image: circleci/node:10
     steps:
@@ -9,6 +9,6 @@ jobs:
       - run:
           name: Deploy Package
           command: |           
-             - npm run build
-             - echo -e "$NPM_USERNAME\n$NPM_PASSWORD\n$NPM_EMAIL" | npm login
-             - npm run 2npm      
+            npm run build
+            echo -e "$NPM_USERNAME\n$NPM_PASSWORD\n$NPM_EMAIL" | npm login
+            npm run 2npm      
