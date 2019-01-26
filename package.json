@@ -1,6 +1,6 @@
 {
   "name": "tibber-dsf",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "main": "index.js",
   "license": "MIT",
   "scripts": {
@@ -10,6 +10,7 @@
     "login": "npm-cli-login -u $NPM_USERNAME -p $NPM_PASSWORD -e $NPM_EMAIL",
     "2npm": "publish"
   },
+  "homepage": "https://github.com/tibbercom/tibber-dsf",
   "devDependencies": {
     "ava": "^0.25.0",
     "babel-cli": "^6.9.0",
@@ -24,8 +25,7 @@
   },
   "dependencies": {
     "handlebars": "^4.0.12",
-    "moment-timezone": "^0.5.23",
-    "npm-cli-login": "^0.1.1",
+    "moment-timezone": "^0.5.23",    
     "request": "^2.88.0",
     "request-promise": "^4.2.2",
     "xml2js": "^0.4.19"
