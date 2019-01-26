@@ -1,0 +1,27 @@
+<s:Envelope xmlns:s="http://schemas.xmlsoap.org/soap/envelope/">
+    {{#session}}
+    <s:Header>
+        <h:Brukersesjon xmlns:h="http://ws.infotorg.no/xml/Admin/Brukersesjon/2006-07-07/Brukersesjon.xsd" 
+            xmlns="http://ws.infotorg.no/xml/Admin/Brukersesjon/2006-07-07/Brukersesjon.xsd" 
+            xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+            xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+            <distribusjonskanal xmlns="">PTP</distribusjonskanal>            
+            <systemnavn xmlns="">{{system}}</systemnavn>
+            <brukernavn xmlns="">{{user}}</brukernavn>
+            <passord xmlns="">{{pwd}}</passord>
+            {{#if sessionId}}<sesjonsid xmlns="">{{sessionId}}<sesjonsid> {{/if}}
+        </h:Brukersesjon>
+        <h:Transaksjon xmlns:h="http://ws.infotorg.no/xml/Admin/Transaksjon/2006-07-07/Transaksjon.xsd" 
+            xmlns="http://ws.infotorg.no/xml/Admin/Transaksjon/2006-07-07/Transaksjon.xsd"/>
+    </s:Header>
+    {{/session}}
+    <s:Body xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+        xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+        <hentDetaljer_v2 xmlns="http://ws.infotorg.no/xml/ErgoGroup/DetSentraleFolkeregister1_4/2015-08-10/DetSentraleFolkeregister1_4.xsd">
+            {{#if userRef}}<saksref xmlns="">{{userRef}}</saksref>{{/if}}
+            {{#if birthDate}}<foedselsdato xmlns="">{{birthDate}}</foedselsdato>{{/if}}
+            {{#if lastName}}<etternavn xmlns="">{{lastName}}</etternavn>{{/if}}
+            {{#if firstName}}<fornavn xmlns="">{{firstName}}</fornavn>{{/if}}
+            {{#if postalCode}}<postnr xmlns="">{{postalCode}}</postnr>{{/if}}
+        </hentDetaljer_v2>    </s:Body>
+</s:Envelope>
