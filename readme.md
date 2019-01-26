@@ -10,7 +10,6 @@ To obtain login credentials and other permissions go to infotorg.no
 NPM:
 ```
 $ npm install --save tibber-dsf
-
 ```
 
 Yarn:
