@@ -8,7 +8,8 @@ jobs:
       - checkout
       - run:
           name: Deploy Package
-          command: |           
-            npm run build
+          command: |     
+            yarn      
+            yarn build
             echo -e "$NPM_USERNAME\n$NPM_PASSWORD\n$NPM_EMAIL" | npm login
             npm run 2npm      
