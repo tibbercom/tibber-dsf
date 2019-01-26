@@ -9,7 +9,7 @@
             <systemnavn xmlns="">{{system}}</systemnavn>
             <brukernavn xmlns="">{{user}}</brukernavn>
             <passord xmlns="">{{pwd}}</passord>
-            {{#if sessionId}}<sesjonsid xmlns="">{{sessionId}}<sesjonsid> {{/if}}
+            {{#if sessionId}}<sesjonsid xmlns="">{{sessionId}}</sesjonsid> {{/if}}
         </h:Brukersesjon>
         <h:Transaksjon xmlns:h="http://ws.infotorg.no/xml/Admin/Transaksjon/2006-07-07/Transaksjon.xsd" 
             xmlns="http://ws.infotorg.no/xml/Admin/Transaksjon/2006-07-07/Transaksjon.xsd"/>
