@@ -1,7 +1,7 @@
 {
   "name": "tibber-dsf",
   "version": "0.2.0",
-  "main": "index.js",
+  "main": "./lib/index.js",
   "license": "MIT",
   "scripts": {
     "build": "babel src -d lib; cp src/template.xml lib/template.xml",
