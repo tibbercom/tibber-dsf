@@ -24,13 +24,13 @@ export default ({ env, system, user, pwd }) => {
 
     const session = { user, pwd, system }
 
-    return async ({ userRef, birthDate, lastName, firstName, postalCode }) => {
+    return async ({ userRef, birthDate, lastName, firstName, postalCode, ssn }) => {
 
         if (!userRef) return { success: false, error: "userRef must have value" };
 
         birthDate = moment.tz(birthDate, 'Europe/Oslo').format('DDMMYY');
 
-        const payload = template({ session, birthDate, lastName, firstName, postalCode, userRef });
+        const payload = template({ session, birthDate, lastName, firstName, postalCode, userRef, ssn });
 
         const options = {
             uri: (env && env.toLowerCase() || 'test') === 'test' ? testUrl : prodUrl,

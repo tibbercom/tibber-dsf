@@ -19,6 +19,7 @@
         xmlns:xsd="http://www.w3.org/2001/XMLSchema">
         <hentDetaljer_v2 xmlns="http://ws.infotorg.no/xml/ErgoGroup/DetSentraleFolkeregister1_4/2015-08-10/DetSentraleFolkeregister1_4.xsd">
             {{#if userRef}}<saksref xmlns="">{{userRef}}</saksref>{{/if}}
+            {{#if ssn}}<foedselsnr xmlns="">{{ssn}}</foedselsnr>{{/if}}
             {{#if birthDate}}<foedselsdato xmlns="">{{birthDate}}</foedselsdato>{{/if}}
             {{#if lastName}}<etternavn xmlns="">{{lastName}}</etternavn>{{/if}}
             {{#if firstName}}<fornavn xmlns="">{{firstName}}</fornavn>{{/if}}
