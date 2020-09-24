@@ -1,5 +1,16 @@
 {
-  "presets": ["es2015"],
-  "plugins": ["syntax-async-functions","transform-regenerator", "transform-es2015-spread", "transform-object-rest-spread"],
-  "ignore": ["node_modules/**/*", "lib/**/*"]
+  "presets": [
+    [
+      "@babel/preset-env",
+      {
+        "targets": {
+          "node": "8"
+        }
+      }
+    ]
+  ],
+  "ignore": [
+    "node_modules/**/*",
+    "lib/**/*"
+  ]
 }
