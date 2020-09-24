@@ -53,9 +53,7 @@ export default ({ env, system, user, pwd }) => {
 
         birthDate = moment.tz(birthDate, 'Europe/Oslo').format('DDMMYY');
 
-        const payload = template({ session, birthDate, lastName, firstName, postalCode, userRef, ssn });
-
-        console.log(payload);
+        const payload = template({ session, birthDate, lastName, firstName, postalCode, userRef, ssn });        
 
         const options = {
             uri: (env && env.toLowerCase() || 'test') === 'test' ? testUrl : prodUrl,
@@ -86,7 +84,7 @@ export default ({ env, system, user, pwd }) => {
                     lastName: normalizeName(result["navn-s"]),
                     firstName: normalizeName(result["navn-f"]),
                     middleName: normalizeName(result["navn-m"]),
-                    isDeceased: result["stat-kid"] == "5",
+                    isDeceased: result["stat-kd"] == "5",
                     statusText: result["stat"],
                     gender: result["KJONN"] == "M" ? "male" : "female",
                     address: {
