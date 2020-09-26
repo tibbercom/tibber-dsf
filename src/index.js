@@ -86,7 +86,8 @@ export default ({ env, system, user, pwd }) => {
                     middleName: normalizeName(result["navn-m"]),
                     isDeceased: result["stat-kd"] == "5",
                     statusText: result["stat"],
-                    gender: result["KJONN"] == "M" ? "male" : "female",
+                    gender: result["kjonn"] == "M" ? "male" : "female",
+                    hasSecretAddress: result['6', '7'].includes('spes-kd'),
                     address: {
                         address: result["adr"],
                         postalCode: result["postn"],
