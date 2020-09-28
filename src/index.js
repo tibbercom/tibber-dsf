@@ -53,7 +53,7 @@ export default ({ env, system, user, pwd }) => {
 
         birthDate = moment.tz(birthDate, 'Europe/Oslo').format('DDMMYY');
 
-        const payload = template({ session, birthDate, lastName, firstName, postalCode, userRef, ssn });        
+        const payload = template({ session, birthDate, lastName, firstName, postalCode, userRef, ssn });
 
         const options = {
             uri: (env && env.toLowerCase() || 'test') === 'test' ? testUrl : prodUrl,
@@ -87,7 +87,7 @@ export default ({ env, system, user, pwd }) => {
                     isDeceased: result["stat-kd"] == "5",
                     statusText: result["stat"],
                     gender: result["kjonn"] == "M" ? "male" : "female",
-                    hasSecretAddress: result['6', '7'].includes('spes-kd'),
+                    hasSecretAddress: ['6', '7'].includes(result['spes-kd']),
                     address: {
                         address: result["adr"],
                         postalCode: result["postn"],
