@@ -51,7 +51,7 @@ export default ({ env, system, user, pwd }) => {
 
         if (!userRef) return { success: false, error: "userRef must have value" };
 
-        birthDate = moment.tz(birthDate, 'Europe/Oslo').format('DDMMYY');
+        birthDate = birthDate && moment.tz(birthDate, 'Europe/Oslo').format('DDMMYY');
 
         const payload = template({ session, birthDate, lastName, firstName, postalCode, userRef, ssn });
 
