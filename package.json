@@ -1,6 +1,6 @@
 {
   "name": "tibber-dsf",
-  "version": "0.11.2",
+  "version": "0.11.3",
   "main": "./lib/index.js",
   "license": "MIT",
   "scripts": {
